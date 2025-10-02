@@ -25,17 +25,16 @@ winpty docker exec -it mongo-test mongosh
 use myapp
 show dbs 
 show collections
-
 ```
 
 ## Insertar Documento
-
+```
 db.products.insertOne({ name: "Coca de vidrio fria", price: 10000 })
 db.products.insertMany([
   { name: "Camiseta", price: 20 },
   { name: "Pantalón", price: 35 }
 ])
-
+```
 ##  Leer Documentos
 
 ```
@@ -48,4 +47,4 @@ db.products.updateOne({ name: "Camiseta" }, { $set: { price: 25 } })
 ## Eliminar Documento
 ```
 db.products.deleteOne({ name: "Pantalón" })
-```# Crud_MongoDb_Docker-
+```
