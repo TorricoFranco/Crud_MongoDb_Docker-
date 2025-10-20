@@ -1,6 +1,20 @@
-### Trabajo Práctico CRUD básico MongoDB en Docker
+# Trabajo Práctico: E-commerce MongoDB
 Materia: Administración y Gestión de Base de Datos 
 
+**Este proyecto consiste en implementar un sistema básico de e-commerce en MongoDB**
+- Creación de colecciones y validaciones de esquema ($jsonSchema)  
+- Relaciones entre colecciones y referencias  
+- Inserción y consulta de datos  
+- Agregaciones y estadísticas con $lookup, $project y $facet  
+- Índices: únicos, compuestos y de texto  
+- Transacciones para operaciones atómicas  
+- Vistas (createView)  
+- Validaciones avanzadas y reglas de negocio  
+- Change Streams para auditoría en tiempo real  
+- Campos calculados en documentos  
+- Exportación/importación de bases
+
+## Pasos de instalación:
 
 ## Construir Imagen de Docker
 ```
@@ -18,33 +32,3 @@ winpty docker exec -it mongo-test mongosh
 
 ```
 
-
-## Comandos usados
-
-```
-use myapp
-show dbs 
-show collections
-```
-
-## Insertar Documento
-```
-db.products.insertOne({ name: "Coca de vidrio fria", price: 10000 })
-db.products.insertMany([
-  { name: "Camiseta", price: 20 },
-  { name: "Pantalón", price: 35 }
-])
-```
-##  Leer Documentos
-
-```
-db.products.find().pretty()
-```
-## Actualizar Documento 
-```
-db.products.updateOne({ name: "Camiseta" }, { $set: { price: 25 } })
-```
-## Eliminar Documento
-```
-db.products.deleteOne({ name: "Pantalón" })
-```
